@@ -315,3 +315,39 @@ You can deploy your Vite app as a Static Site on [Render](https://render.com/).
 By default, any new commit pushed to the specified branch will automatically trigger a new deployment. [Auto-Deploy](https://render.com/docs/deploys#toggling-auto-deploy-for-a-service) can be configured in the project settings.
 
 You can also add a [custom domain](https://render.com/docs/custom-domains) to your project.
+
+## Stoat
+
+You can preview your Vite app build by GitHub workflows on pull requests with [Stoat](https://stoat.dev/).
+
+1. Install the [Stoat App](https://github.com/apps/stoat-app).
+
+2. Append the [Stoat Action]() at the of the GitHub workflow that generates the Vite preview.
+
+   ```sh{4-6}
+   - name: Build Vite preview
+     run: npm run build
+
+   - name: Run Stoat Action
+     uses: stoat-dev/stoat-action@v0
+     if: always()
+   ```
+
+3. Add a Stoat config file in `.stoat/config.yaml`.
+
+   ```yaml
+   version: 1
+   enabled: true
+   plugins:
+   static_hosting:
+     vite-preview:
+       # This is the path to the generated preview.
+       # Please update it if you have customized the build.outDir.
+       path: dist
+   ```
+
+Now whenever a pull request is created, the Stoat App will create and maintain a pinned comment with a link to the preview.
+
+![stoat-vite-preview-screenshot](https://stoat-dev--static.stoat.page/screenshot-vite-preview.png)
+
+Learn more about Stoat's [static site preview](https://docs.stoat.dev/docs/tutorials/preview-static-site).
