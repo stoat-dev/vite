@@ -346,8 +346,8 @@ You can preview your Vite app build by GitHub workflows on pull requests with [S
        path: dist
    ```
 
-Now whenever a pull request is created, the Stoat App will create and maintain a pinned comment with a link to the preview.
+Now whenever a pull request is created on GitHub, the Stoat App will create and maintain a pinned comment with a link to the hosted preview.
 
-![stoat-vite-preview-screenshot](https://stoat-dev--static.stoat.page/screenshot-vite-preview.png)
+<img width="500" src="https://stoat-dev--static.stoat.page/screenshot-vite-preview.png" alt="screenshot of preview vite via stoat">
 
 Learn more about Stoat's [static site preview](https://docs.stoat.dev/docs/tutorials/preview-static-site).
