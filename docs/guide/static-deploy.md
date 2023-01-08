@@ -318,11 +318,11 @@ You can also add a [custom domain](https://render.com/docs/custom-domains) to yo
 
 ## Stoat
 
-You can preview your Vite app build by GitHub workflows on pull requests with [Stoat](https://stoat.dev/).
+You can preview your Vite app built by the GitHub workflows on pull requests with [Stoat](https://stoat.dev/).
 
 1. Install the [Stoat App](https://github.com/apps/stoat-app).
 
-2. Append the [Stoat Action]() at the of the GitHub workflow that generates the Vite preview.
+2. Append the [Stoat Action](https://github.com/marketplace/actions/stoat-action) at the of the GitHub workflow that generates the Vite preview.
 
    ```yaml{4-6}
    - name: Build Vite preview
