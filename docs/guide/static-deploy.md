@@ -324,7 +324,7 @@ You can preview your Vite app build by GitHub workflows on pull requests with [S
 
 2. Append the [Stoat Action]() at the of the GitHub workflow that generates the Vite preview.
 
-   ```sh{4-6}
+   ```yaml{4-6}
    - name: Build Vite preview
      run: npm run build
 
