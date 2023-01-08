@@ -324,10 +324,12 @@ You can preview your Vite app built by the GitHub workflows on pull requests wit
 
 2. Append the [Stoat Action](https://github.com/marketplace/actions/stoat-action) at the of the GitHub workflow that generates the Vite preview.
 
-   ```yaml{4-6}
+   ```yaml{5-8}
+   # existing step that generates the preview
    - name: Build Vite preview
      run: npm run build
 
+   # new step to append
    - name: Run Stoat Action
      uses: stoat-dev/stoat-action@v0
      if: always()
